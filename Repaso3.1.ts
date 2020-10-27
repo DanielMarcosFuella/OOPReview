@@ -9,6 +9,7 @@ export class MobileLibrary{
         this.name=name
         this.location=location
         this.mobiles=mobiles
+        this.totalPriceCalculation()
     }
     public GetName():string{
         return this.name
@@ -28,11 +29,19 @@ export class MobileLibrary{
     public SetMobiles(newMobiles:Mobile[]){
         this.mobiles=newMobiles
     }
-    public totalPriceCalculation():number{
+    private totalPriceCalculation():number{
         this.totalPrice=0
         for (let i=0;i<this.mobiles.length;i++){
             this.totalPrice+=this.mobiles[i].GetPrice()
         }
         return this.totalPrice
+    }
+    public printLibrary():string{
+        let mensaje= "This is all my mobiles:" + "\n" 
+        for(let i=0;i<this.mobiles.length;i++){
+            mensaje+= this.mobiles[i].toStrong()
+        }
+        mensaje+="Price overall: " + this.totalPrice
+        return mensaje
     }
 }

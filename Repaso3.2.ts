@@ -10,7 +10,7 @@ let mismoviles=[movil1,movil2,movil3,movil4]
 
 let libreria1:MobileLibrary = new MobileLibrary("MundoMobile", "Lobon", mismoviles)
 
-console.log(libreria1.GetName())
-console.log(movil1.GetPrice())
-console.log(libreria1.totalPriceCalculation())
-console.log(libreria1.GetLocation())
+// console.log(libreria1.GetName())
+// console.log(movil1.GetPrice())
+ console.log(libreria1.printLibrary())
+// console.log(libreria1.GetLocation())
