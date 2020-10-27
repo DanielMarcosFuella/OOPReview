@@ -29,6 +29,7 @@ export class MobileLibrary{
         this.mobiles=newMobiles
     }
     public totalPriceCalculation():number{
+        this.totalPrice=0
         for (let i=0;i<this.mobiles.length;i++){
             this.totalPrice+=this.mobiles[i].GetPrice()
         }
